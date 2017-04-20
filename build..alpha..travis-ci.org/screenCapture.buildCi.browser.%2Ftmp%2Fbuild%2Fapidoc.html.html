@@ -1,0 +1,784 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>webrtc-adapter (v3.3.3)</a>
+</h1>
+<h4>A shim to insulate apps from WebRTC spec changes and browser prefix differences</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webrtc-adapter">module webrtc-adapter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.disableLog">
+            function <span class="apidocSignatureSpan">webrtc-adapter.</span>disableLog
+            <span class="apidocSignatureSpan">(bool)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.extractVersion">
+            function <span class="apidocSignatureSpan">webrtc-adapter.</span>extractVersion
+            <span class="apidocSignatureSpan">(uastring, expr, pos)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webrtc-adapter.</span>adapter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webrtc-adapter.</span>adapter_core</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webrtc-adapter.</span>adapter_no_edge</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webrtc-adapter.</span>browserDetails</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webrtc-adapter.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webrtc-adapter.adapter">module webrtc-adapter.adapter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.adapter.disableLog">
+            function <span class="apidocSignatureSpan">webrtc-adapter.adapter.</span>disableLog
+            <span class="apidocSignatureSpan">(bool)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.adapter.extractVersion">
+            function <span class="apidocSignatureSpan">webrtc-adapter.adapter.</span>extractVersion
+            <span class="apidocSignatureSpan">(uastring, expr, pos)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webrtc-adapter.adapter.</span>browserDetails</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webrtc-adapter.adapter_core">module webrtc-adapter.adapter_core</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.adapter_core.disableLog">
+            function <span class="apidocSignatureSpan">webrtc-adapter.adapter_core.</span>disableLog
+            <span class="apidocSignatureSpan">(bool)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.adapter_core.extractVersion">
+            function <span class="apidocSignatureSpan">webrtc-adapter.adapter_core.</span>extractVersion
+            <span class="apidocSignatureSpan">(uastring, expr, pos)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webrtc-adapter.adapter_core.</span>browserDetails</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webrtc-adapter.adapter_no_edge">module webrtc-adapter.adapter_no_edge</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.adapter_no_edge.disableLog">
+            function <span class="apidocSignatureSpan">webrtc-adapter.adapter_no_edge.</span>disableLog
+            <span class="apidocSignatureSpan">(bool)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.adapter_no_edge.extractVersion">
+            function <span class="apidocSignatureSpan">webrtc-adapter.adapter_no_edge.</span>extractVersion
+            <span class="apidocSignatureSpan">(uastring, expr, pos)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webrtc-adapter.adapter_no_edge.</span>browserDetails</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webrtc-adapter.utils">module webrtc-adapter.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.utils.detectBrowser">
+            function <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>detectBrowser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.utils.disableLog">
+            function <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>disableLog
+            <span class="apidocSignatureSpan">(bool)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.utils.extractVersion">
+            function <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>extractVersion
+            <span class="apidocSignatureSpan">(uastring, expr, pos)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.utils.log">
+            function <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>log
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webrtc-adapter.utils.shimCreateObjectURL">
+            function <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>shimCreateObjectURL
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>browserDetails</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webrtc-adapter" id="apidoc.module.webrtc-adapter">module webrtc-adapter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.disableLog" id="apidoc.element.webrtc-adapter.disableLog">
+        function <span class="apidocSignatureSpan">webrtc-adapter.</span>disableLog
+        <span class="apidocSignatureSpan">(bool)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disableLog = function (bool) {
+  if (typeof bool !== 'boolean') {
+    return new Error('Argument type: ' + typeof bool +
+        '. Please use a boolean.');
+  }
+  logDisabled_ = bool;
+  return (bool) ? 'adapter.js logging disabled' :
+      'adapter.js logging enabled';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Export to the adapter global object visible in the browser.
+module.exports.browserDetails = browserDetails;
+module.exports.extractVersion = utils.extractVersion;
+module.exports.disableLog = utils.disableLog;
+
+// Uncomment the line below if you want logging to occur, including logging
+// for the switch statement below. Can also be turned on in the browser via
+// adapter.<span class="apidocCodeKeywordSpan">disableLog</span>(false), but then logging from the switch statement below
+// will not appear.
+// require('./utils').disableLog(false);
+
+// Browser shims.
+var chromeShim = require('./chrome/chrome_shim') || null;
+var edgeShim = require('./edge/edge_shim') || null;
+var firefoxShim = require('./firefox/firefox_shim') || null;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.extractVersion" id="apidoc.element.webrtc-adapter.extractVersion">
+        function <span class="apidocSignatureSpan">webrtc-adapter.</span>extractVersion
+        <span class="apidocSignatureSpan">(uastring, expr, pos)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractVersion = function (uastring, expr, pos) {
+  var match = uastring.match(expr);
+  return match &amp;&amp; match.length &gt;= pos &amp;&amp; parseInt(match[pos], 10);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  result.browser = 'Not a browser.';
+  return result;
+}
+
+// Firefox.
+if (navigator.mozGetUserMedia) {
+  result.browser = 'firefox';
+  result.version = this.<span class="apidocCodeKeywordSpan">extractVersion</span>(navigator.userAgent,
+      /Firefox\/(\d+)\./, 1);
+} else if (navigator.webkitGetUserMedia) {
+  // Chrome, Chromium, Webview, Opera, all use the chrome shim for now
+  if (window.webkitRTCPeerConnection) {
+    result.browser = 'chrome';
+    result.version = this.extractVersion(navigator.userAgent,
+      /Chrom(e|ium)\/(\d+)\./, 2);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webrtc-adapter.adapter" id="apidoc.module.webrtc-adapter.adapter">module webrtc-adapter.adapter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.adapter.disableLog" id="apidoc.element.webrtc-adapter.adapter.disableLog">
+        function <span class="apidocSignatureSpan">webrtc-adapter.adapter.</span>disableLog
+        <span class="apidocSignatureSpan">(bool)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disableLog = function (bool) {
+  if (typeof bool !== 'boolean') {
+    return new Error('Argument type: ' + typeof bool +
+        '. Please use a boolean.');
+  }
+  logDisabled_ = bool;
+  return (bool) ? 'adapter.js logging disabled' :
+      'adapter.js logging enabled';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Export to the adapter global object visible in the browser.
+module.exports.browserDetails = browserDetails;
+module.exports.extractVersion = utils.extractVersion;
+module.exports.disableLog = utils.disableLog;
+
+// Uncomment the line below if you want logging to occur, including logging
+// for the switch statement below. Can also be turned on in the browser via
+// adapter.<span class="apidocCodeKeywordSpan">disableLog</span>(false), but then logging from the switch statement below
+// will not appear.
+// require('./utils').disableLog(false);
+
+// Browser shims.
+var chromeShim = require('./chrome/chrome_shim') || null;
+var edgeShim = require('./edge/edge_shim') || null;
+var firefoxShim = require('./firefox/firefox_shim') || null;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.adapter.extractVersion" id="apidoc.element.webrtc-adapter.adapter.extractVersion">
+        function <span class="apidocSignatureSpan">webrtc-adapter.adapter.</span>extractVersion
+        <span class="apidocSignatureSpan">(uastring, expr, pos)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractVersion = function (uastring, expr, pos) {
+  var match = uastring.match(expr);
+  return match &amp;&amp; match.length &gt;= pos &amp;&amp; parseInt(match[pos], 10);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  result.browser = 'Not a browser.';
+  return result;
+}
+
+// Firefox.
+if (navigator.mozGetUserMedia) {
+  result.browser = 'firefox';
+  result.version = this.<span class="apidocCodeKeywordSpan">extractVersion</span>(navigator.userAgent,
+      /Firefox\/(\d+)\./, 1);
+} else if (navigator.webkitGetUserMedia) {
+  // Chrome, Chromium, Webview, Opera, all use the chrome shim for now
+  if (window.webkitRTCPeerConnection) {
+    result.browser = 'chrome';
+    result.version = this.extractVersion(navigator.userAgent,
+      /Chrom(e|ium)\/(\d+)\./, 2);
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webrtc-adapter.adapter_core" id="apidoc.module.webrtc-adapter.adapter_core">module webrtc-adapter.adapter_core</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.adapter_core.disableLog" id="apidoc.element.webrtc-adapter.adapter_core.disableLog">
+        function <span class="apidocSignatureSpan">webrtc-adapter.adapter_core.</span>disableLog
+        <span class="apidocSignatureSpan">(bool)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disableLog = function (bool) {
+  if (typeof bool !== 'boolean') {
+    return new Error('Argument type: ' + typeof bool +
+        '. Please use a boolean.');
+  }
+  logDisabled_ = bool;
+  return (bool) ? 'adapter.js logging disabled' :
+      'adapter.js logging enabled';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Export to the adapter global object visible in the browser.
+module.exports.browserDetails = browserDetails;
+module.exports.extractVersion = utils.extractVersion;
+module.exports.disableLog = utils.disableLog;
+
+// Uncomment the line below if you want logging to occur, including logging
+// for the switch statement below. Can also be turned on in the browser via
+// adapter.<span class="apidocCodeKeywordSpan">disableLog</span>(false), but then logging from the switch statement below
+// will not appear.
+// require('./utils').disableLog(false);
+
+// Browser shims.
+var chromeShim = require('./chrome/chrome_shim') || null;
+var edgeShim = require('./edge/edge_shim') || null;
+var firefoxShim = require('./firefox/firefox_shim') || null;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.adapter_core.extractVersion" id="apidoc.element.webrtc-adapter.adapter_core.extractVersion">
+        function <span class="apidocSignatureSpan">webrtc-adapter.adapter_core.</span>extractVersion
+        <span class="apidocSignatureSpan">(uastring, expr, pos)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractVersion = function (uastring, expr, pos) {
+  var match = uastring.match(expr);
+  return match &amp;&amp; match.length &gt;= pos &amp;&amp; parseInt(match[pos], 10);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  result.browser = 'Not a browser.';
+  return result;
+}
+
+// Firefox.
+if (navigator.mozGetUserMedia) {
+  result.browser = 'firefox';
+  result.version = this.<span class="apidocCodeKeywordSpan">extractVersion</span>(navigator.userAgent,
+      /Firefox\/(\d+)\./, 1);
+} else if (navigator.webkitGetUserMedia) {
+  // Chrome, Chromium, Webview, Opera, all use the chrome shim for now
+  if (window.webkitRTCPeerConnection) {
+    result.browser = 'chrome';
+    result.version = this.extractVersion(navigator.userAgent,
+      /Chrom(e|ium)\/(\d+)\./, 2);
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webrtc-adapter.adapter_no_edge" id="apidoc.module.webrtc-adapter.adapter_no_edge">module webrtc-adapter.adapter_no_edge</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.adapter_no_edge.disableLog" id="apidoc.element.webrtc-adapter.adapter_no_edge.disableLog">
+        function <span class="apidocSignatureSpan">webrtc-adapter.adapter_no_edge.</span>disableLog
+        <span class="apidocSignatureSpan">(bool)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disableLog = function (bool) {
+  if (typeof bool !== 'boolean') {
+    return new Error('Argument type: ' + typeof bool +
+        '. Please use a boolean.');
+  }
+  logDisabled_ = bool;
+  return (bool) ? 'adapter.js logging disabled' :
+      'adapter.js logging enabled';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Export to the adapter global object visible in the browser.
+module.exports.browserDetails = browserDetails;
+module.exports.extractVersion = utils.extractVersion;
+module.exports.disableLog = utils.disableLog;
+
+// Uncomment the line below if you want logging to occur, including logging
+// for the switch statement below. Can also be turned on in the browser via
+// adapter.<span class="apidocCodeKeywordSpan">disableLog</span>(false), but then logging from the switch statement below
+// will not appear.
+// require('./utils').disableLog(false);
+
+// Browser shims.
+var chromeShim = require('./chrome/chrome_shim') || null;
+var edgeShim = require('./edge/edge_shim') || null;
+var firefoxShim = require('./firefox/firefox_shim') || null;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.adapter_no_edge.extractVersion" id="apidoc.element.webrtc-adapter.adapter_no_edge.extractVersion">
+        function <span class="apidocSignatureSpan">webrtc-adapter.adapter_no_edge.</span>extractVersion
+        <span class="apidocSignatureSpan">(uastring, expr, pos)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractVersion = function (uastring, expr, pos) {
+  var match = uastring.match(expr);
+  return match &amp;&amp; match.length &gt;= pos &amp;&amp; parseInt(match[pos], 10);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  result.browser = 'Not a browser.';
+  return result;
+}
+
+// Firefox.
+if (navigator.mozGetUserMedia) {
+  result.browser = 'firefox';
+  result.version = this.<span class="apidocCodeKeywordSpan">extractVersion</span>(navigator.userAgent,
+      /Firefox\/(\d+)\./, 1);
+} else if (navigator.webkitGetUserMedia) {
+  // Chrome, Chromium, Webview, Opera, all use the chrome shim for now
+  if (window.webkitRTCPeerConnection) {
+    result.browser = 'chrome';
+    result.version = this.extractVersion(navigator.userAgent,
+      /Chrom(e|ium)\/(\d+)\./, 2);
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webrtc-adapter.utils" id="apidoc.module.webrtc-adapter.utils">module webrtc-adapter.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.utils.detectBrowser" id="apidoc.element.webrtc-adapter.utils.detectBrowser">
+        function <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>detectBrowser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">detectBrowser = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+};
+
+// Export.
+module.exports = {
+  log: utils.log,
+  disableLog: utils.disableLog,
+  browserDetails: utils.<span class="apidocCodeKeywordSpan">detectBrowser</span>(),
+  extractVersion: utils.extractVersion,
+  shimCreateObjectURL: utils.shimCreateObjectURL,
+  detectBrowser: utils.detectBrowser.bind(utils)
+};
+
+},{}]},{},[2])(2)
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.utils.disableLog" id="apidoc.element.webrtc-adapter.utils.disableLog">
+        function <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>disableLog
+        <span class="apidocSignatureSpan">(bool)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disableLog = function (bool) {
+  if (typeof bool !== 'boolean') {
+    return new Error('Argument type: ' + typeof bool +
+        '. Please use a boolean.');
+  }
+  logDisabled_ = bool;
+  return (bool) ? 'adapter.js logging disabled' :
+      'adapter.js logging enabled';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Export to the adapter global object visible in the browser.
+module.exports.browserDetails = browserDetails;
+module.exports.extractVersion = utils.extractVersion;
+module.exports.disableLog = utils.disableLog;
+
+// Uncomment the line below if you want logging to occur, including logging
+// for the switch statement below. Can also be turned on in the browser via
+// adapter.<span class="apidocCodeKeywordSpan">disableLog</span>(false), but then logging from the switch statement below
+// will not appear.
+// require('./utils').disableLog(false);
+
+// Browser shims.
+var chromeShim = require('./chrome/chrome_shim') || null;
+var edgeShim = require('./edge/edge_shim') || null;
+var firefoxShim = require('./firefox/firefox_shim') || null;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.utils.extractVersion" id="apidoc.element.webrtc-adapter.utils.extractVersion">
+        function <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>extractVersion
+        <span class="apidocSignatureSpan">(uastring, expr, pos)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extractVersion = function (uastring, expr, pos) {
+  var match = uastring.match(expr);
+  return match &amp;&amp; match.length &gt;= pos &amp;&amp; parseInt(match[pos], 10);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  result.browser = 'Not a browser.';
+  return result;
+}
+
+// Firefox.
+if (navigator.mozGetUserMedia) {
+  result.browser = 'firefox';
+  result.version = this.<span class="apidocCodeKeywordSpan">extractVersion</span>(navigator.userAgent,
+      /Firefox\/(\d+)\./, 1);
+} else if (navigator.webkitGetUserMedia) {
+  // Chrome, Chromium, Webview, Opera, all use the chrome shim for now
+  if (window.webkitRTCPeerConnection) {
+    result.browser = 'chrome';
+    result.version = this.extractVersion(navigator.userAgent,
+      /Chrom(e|ium)\/(\d+)\./, 2);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.utils.log" id="apidoc.element.webrtc-adapter.utils.log">
+        function <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>log
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function () {
+  if (typeof window === 'object') {
+    if (logDisabled_) {
+      return;
+    }
+    if (typeof console !== 'undefined' &amp;&amp; typeof console.log === 'function') {
+      console.log.apply(console, arguments);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var nativeRevokeObjectURL = URL.revokeObjectURL.bind(URL);
+var streams = new Map(), newId = 0;
+
+URL.createObjectURL = function(stream) {
+  if ('getTracks' in stream) {
+    var url = 'polyblob:' + (++newId);
+    streams.set(url, stream);
+    console.<span class="apidocCodeKeywordSpan">log</span>('URL.createObjectURL(stream) is deprecated! ' +
+                'Use elem.srcObject = stream instead!');
+    return url;
+  }
+  return nativeCreateObjectURL(stream);
+};
+URL.revokeObjectURL = function(url) {
+  nativeRevokeObjectURL(url);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webrtc-adapter.utils.shimCreateObjectURL" id="apidoc.element.webrtc-adapter.utils.shimCreateObjectURL">
+        function <span class="apidocSignatureSpan">webrtc-adapter.utils.</span>shimCreateObjectURL
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shimCreateObjectURL = function () {
+  if (!(typeof window === 'object' &amp;&amp; window.HTMLMediaElement &amp;&amp;
+        'srcObject' in window.HTMLMediaElement.prototype)) {
+    // Only shim CreateObjectURL using srcObject if srcObject exists.
+    return undefined;
+  }
+
+  var nativeCreateObjectURL = URL.createObjectURL.bind(URL);
+  var nativeRevokeObjectURL = URL.revokeObjectURL.bind(URL);
+  var streams = new Map(), newId = 0;
+
+  URL.createObjectURL = function(stream) {
+    if ('getTracks' in stream) {
+      var url = 'polyblob:' + (++newId);
+      streams.set(url, stream);
+      console.log('URL.createObjectURL(stream) is deprecated! ' +
+                  'Use elem.srcObject = stream instead!');
+      return url;
+    }
+    return nativeCreateObjectURL(stream);
+  };
+  URL.revokeObjectURL = function(url) {
+    nativeRevokeObjectURL(url);
+    streams.delete(url);
+  };
+
+  var dsc = Object.getOwnPropertyDescriptor(window.HTMLMediaElement.prototype,
+                                            'src');
+  Object.defineProperty(window.HTMLMediaElement.prototype, 'src', {
+    get: function() {
+      return dsc.get.apply(this);
+    },
+    set: function(url) {
+      this.srcObject = streams.get(url) || null;
+      return dsc.set.apply(this, [url]);
+    }
+  });
+
+  var nativeSetAttribute = HTMLMediaElement.prototype.setAttribute;
+  HTMLMediaElement.prototype.setAttribute = function() {
+    if (arguments.length === 2 &amp;&amp;
+        ('' + arguments[0]).toLowerCase() === 'src') {
+      this.srcObject = streams.get(arguments[1]) || null;
+    }
+    return nativeSetAttribute.apply(this, arguments);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+  logging('adapter.js shimming chrome.');
+  // Export to the adapter global object visible in the browser.
+  module.exports.browserShim = chromeShim;
+
+  chromeShim.shimGetUserMedia();
+  chromeShim.shimMediaStream();
+  utils.<span class="apidocCodeKeywordSpan">shimCreateObjectURL</span>();
+  chromeShim.shimSourceObject();
+  chromeShim.shimPeerConnection();
+  chromeShim.shimOnTrack();
+  chromeShim.shimGetSendersWithDtmf();
+  break;
+case 'firefox':
+  if (!firefoxShim || !firefoxShim.shimPeerConnection) {
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
